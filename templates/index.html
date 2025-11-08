@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discord 메시지 보내기</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form id="discordForm">
+    <h2>🤖 디스코드 메시지 보내기<br>봇 계정으로 지정 채널에 메시지를 보내보자</h2>
+    <div id="previewContainer"></div>
+    <div style="position: relative;">
+        <textarea name="message" rows="4" placeholder="보낼 메시지"></textarea>
+        <div id="autocompleteList"></div>
+    </div>
+    <button type="submit">보내기</button>
+    <button type="button" id="toggleHistory">히스토리 보기</button>
+    <div id="historyDivider"></div>
+    <div id="historyContainer"></div>
+</form>
+
+<div id="toast"></div>
+<div id="imageModal"><img id="modalImg"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
